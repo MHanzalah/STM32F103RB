@@ -1,0 +1,36 @@
+\doxysection{Src/\+B\+S\+P/\+Hal.h File Reference}
+\label{_hal_8h}\index{Src/BSP/Hal.h@{Src/BSP/Hal.h}}
+
+
+\+: All ports and peripherals configuration  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+A\+\_\+\+L\+ED}~5U
+\item 
+\#define {\bfseries P\+C\+\_\+\+U\+S\+E\+R\+\_\+\+B\+TN}~13U
+\item 
+\#define {\bfseries I\+N\+\_\+\+B\+TN}()~(G\+P\+I\+OC-\/$>$I\+DR \& B\+IT(P\+C\+\_\+\+U\+S\+E\+R\+\_\+\+B\+TN) )
+\item 
+\#define {\bfseries L\+E\+D\+\_\+\+ON}()~(G\+P\+I\+OA-\/$>$B\+S\+RR = B\+IT(P\+A\+\_\+\+L\+ED))
+\item 
+\#define {\bfseries L\+E\+D\+\_\+\+O\+FF}()~(G\+P\+I\+OA-\/$>$B\+RR = B\+IT(P\+A\+\_\+\+L\+ED))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Port\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Ports and Peripherals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: All ports and peripherals configuration 
+
+\begin{DoxyAuthor}{Author}
+\+: M\+Hanz @hardware \+: S\+T\+M32\+F130\+RB
+\end{DoxyAuthor}
+\DoxyHorRuler{0}
+ @revision \+: \doxysubsubsection{Ver  Author   Date               Changes}\label{_hal_8h_autotoc_md11}
+1.\+0 Name X\+X\+X\+X-\/\+X\+X-\/\+XX Initial Release 

@@ -1,0 +1,42 @@
+\doxysection{Src/\+B\+S\+P/\+Clock.c File Reference}
+\label{_clock_8c}\index{Src/BSP/Clock.c@{Src/BSP/Clock.c}}
+
+
+\+: Configure clock  
+
+
+{\ttfamily \#include $<$Common.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Clock.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries R\+C\+C\+\_\+\+H\+S\+I\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT}~0x10U
+\item 
+\#define {\bfseries C\+L\+O\+C\+K\+\_\+\+W\+A\+I\+T\+T\+I\+ME}~64000000
+\item 
+\#define {\bfseries S\+Y\+S\+C\+L\+O\+C\+K\+\_\+24\+M\+HZ}~24000000U
+\item 
+\#define {\bfseries S\+Y\+S\+C\+L\+O\+C\+K\+\_\+48\+M\+HZ}~48000000U
+\item 
+\#define {\bfseries S\+Y\+S\+C\+L\+O\+C\+K\+\_\+72\+M\+HZ}~72000000U
+\item 
+\#define {\bfseries R\+C\+C\+\_\+\+C\+R\+\_\+\+H\+S\+I\+T\+R\+I\+M\+P\+OS}~3U
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Clock8\+M\+Internal\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes System\+Core\+Clock 64M\+Hz to use internal RC 8M\+Hz (by default for Nucleo) \end{DoxyCompactList}\item 
+void \textbf{ Clock\+Set\+Wait\+States} (uint32\+\_\+t n\+Sys\+Clock)
+\begin{DoxyCompactList}\small\item\em Set wait states for clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Configure clock 
+
+\begin{DoxyAuthor}{Author}
+\+: lcgan @hardware \+: S\+T\+M32\+F130\+RB
+\end{DoxyAuthor}
+\DoxyHorRuler{0}
+ @revision \+: \doxysubsubsection{Ver  Author   Date               Changes}\label{_clock_8c_autotoc_md5}
+1.\+0 Name X\+X\+X\+X-\/\+X\+X-\/\+XX Initial Release 1.\+1 M\+Hanz 2020-\/11-\/11 Format whitespaces and exceeding line 1.\+2 M\+Hanz 2020-\/11-\/15 Doxygen formatted for documentation 
