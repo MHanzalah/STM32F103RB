@@ -22,18 +22,18 @@ Memory use by input file:
   ---------------------------------------------  ----------  ----------  ----------  ----------
   BSP.o                                                  68         122                        
   Clock.o                                               366         112                        
-  Hal.o                                                 162                                    
+  Hal.o                                                 210                                    
   IRQ.o                                                 638                                    
   SEGGER_THUMB_Startup.o                                 20                                    
   SEGGER_crtinit_v7m_little.o                            98                                    
   STM32F103xx_Vectors.o                                 408                                    
   STM32F1xx_Startup.o                                     8                                    
-  Timer.o                                               876         118                      16
+  Timer.o                                               904         118                      16
   Ultrasound.o                                        1 116         128                      24
-  main.o                                              1 304          42           4          92
+  main.o                                              1 368          42           4         104
   system_stm32f10x.o                                    664          16           4            
   ---------------------------------------------  ----------  ----------  ----------  ----------
-  Subtotal (objects):                                 5 728         538           8         132
+  Subtotal (objects):                                 5 868         538           8         144
   ---------------------------------------------  ----------  ----------  ----------  ----------
   libc_v7m_t_le_eabi.a                                2 654          52                   1 160
   ---------------------------------------------  ----------  ----------  ----------  ----------
@@ -41,7 +41,7 @@ Memory use by input file:
   ---------------------------------------------  ----------  ----------  ----------  ----------
   Linker created (init + veneers + exceptions):                      48                   1 536
   =============================================  ==========  ==========  ==========  ==========
-  Grand total:                                        8 382         638           8       2 828
+  Grand total:                                        8 522         638           8       2 840
   =============================================  ==========  ==========  ==========  ==========
 
 Detailed memory use by individual object file:
@@ -49,13 +49,13 @@ Detailed memory use by individual object file:
   Object File                                       RX Code     RO Data     RW Data     ZI Data
   ---------------------------------------------  ----------  ----------  ----------  ----------
   system_stm32f10x.o                                    664          16           4            
-  main.o                                              1 304          42           4          92
+  main.o                                              1 368          42           4         104
   Ultrasound.o                                        1 116         128                      24
   BSP.o                                                  68         122                        
   Clock.o                                               366         112                        
-  Hal.o                                                 162                                    
+  Hal.o                                                 210                                    
   IRQ.o                                                 638                                    
-  Timer.o                                               876         118                      16
+  Timer.o                                               904         118                      16
   SEGGER_THUMB_Startup.o                                 20                                    
   STM32F1xx_Startup.o                                     8                                    
   STM32F103xx_Vectors.o                                 408                                    
@@ -70,7 +70,7 @@ Detailed memory use by individual object file:
   SEGGER_crtinit_v7m_little.o                            98                                    
   [ Linker created ]                                                 48                   1 536
   =============================================  ==========  ==========  ==========  ==========
-  Total:                                              8 382         638           8       2 828
+  Total:                                              8 522         638           8       2 840
   =============================================  ==========  ==========  ==========  ==========
 
 
@@ -96,163 +96,163 @@ Sections by address:
   0800051c-08000537  __aeabi_ui2d                       28   4  Code  RX  floatasmops_arm.o (libc_v7m_t_le_eabi.a)
   08000538-08000577  strcpy                             64   4  Code  RX  strasmops_arm.o (libc_v7m_t_le_eabi.a)
   08000578-080005c7  __aeabi_memcpy8                    80   4  Code  RX  strasmops_arm.o (libc_v7m_t_le_eabi.a)
-  080005c8-080007a5  TimerInit                         478   4  Code  RX  Timer.o
-  080007a6-080007a7  NMI_Handler                         2   2  Code  RX  STM32F103xx_Vectors.o
-  080007a8-08000af5  __SEGGER_RTL_vfprintf             846   4  Code  RX  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  08000af6-08000af7  SVC_Handler                         2   2  Code  RX  STM32F103xx_Vectors.o
-  08000af8-08000af9  PendSV_Handler                      2   2  Code  RX  STM32F103xx_Vectors.o
-  08000afa-08000afb  WWDG_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000afc-08000afd  PVD_IRQHandler                      2   2  Code  RX  STM32F103xx_Vectors.o
-  08000afe-08000aff  TAMPER_IRQHandler                   2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b00-08000b01  RTC_IRQHandler                      2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b02-08000b03  FLASH_IRQHandler                    2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b04-08000b05  RCC_IRQHandler                      2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b06-08000b07  DMA1_Channel1_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b08-08000b09  DMA1_Channel2_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b0a-08000b0b  DMA1_Channel3_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b0c-08000b0d  DMA1_Channel4_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b0e-08000b0f  DMA1_Channel5_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b10-08000b11  DMA1_Channel6_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b12-08000b13  DMA1_Channel7_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b14-08000b15  ADC_IRQHandler                      2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b16-08000b17  CAN1_TX_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b18-08000b19  CAN1_RX0_IRQHandler                 2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b1a-08000b1b  CAN1_RX1_IRQHandler                 2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b1c-08000b1d  CAN1_SCE_IRQHandler                 2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b1e-08000b1f  TIM1_BRK_TIM9_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b20-08000b21  TIM1_TRG_COM_TIM11_IRQHandler
+  080005c8-080007c1  TimerInit                         506   4  Code  RX  Timer.o
+  080007c2-080007c3  NMI_Handler                         2   2  Code  RX  STM32F103xx_Vectors.o
+  080007c4-08000b11  __SEGGER_RTL_vfprintf             846   4  Code  RX  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  08000b12-08000b13  SVC_Handler                         2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b14-08000b15  PendSV_Handler                      2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b16-08000b17  WWDG_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b18-08000b19  PVD_IRQHandler                      2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b1a-08000b1b  TAMPER_IRQHandler                   2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b1c-08000b1d  RTC_IRQHandler                      2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b1e-08000b1f  FLASH_IRQHandler                    2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b20-08000b21  RCC_IRQHandler                      2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b22-08000b23  DMA1_Channel1_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b24-08000b25  DMA1_Channel2_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b26-08000b27  DMA1_Channel3_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b28-08000b29  DMA1_Channel4_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b2a-08000b2b  DMA1_Channel5_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b2c-08000b2d  DMA1_Channel6_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b2e-08000b2f  DMA1_Channel7_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b30-08000b31  ADC_IRQHandler                      2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b32-08000b33  CAN1_TX_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b34-08000b35  CAN1_RX0_IRQHandler                 2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b36-08000b37  CAN1_RX1_IRQHandler                 2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b38-08000b39  CAN1_SCE_IRQHandler                 2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b3a-08000b3b  TIM1_BRK_TIM9_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b3c-08000b3d  TIM1_TRG_COM_TIM11_IRQHandler
                                                          2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b22-08000b23  TIM1_CC_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b24-08000b25  I2C1_EV_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b26-08000b27  I2C1_ER_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b28-08000b29  I2C2_EV_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b2a-08000b2b  I2C2_ER_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b2c-08000b2d  SPI1_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b2e-08000b2f  SPI2_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b30-08000b31  USART1_IRQHandler                   2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b32-08000b33  USART2_IRQHandler                   2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b34-08000b35  USART3_IRQHandler                   2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b36-08000b37  RTCAlarm_IRQHandler                 2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b38-08000b39  USB_FS_WKUP_IRQHandler              2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b3a-08000b3b  TIM8_BRK_TIM12_IRQHandler           2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b3c-08000b3d  TIM8_UP_TIM13_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b3e-08000b3f  TIM8_TRG_COM_TIM14_IRQHandler
+  08000b3e-08000b3f  TIM1_CC_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b40-08000b41  I2C1_EV_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b42-08000b43  I2C1_ER_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b44-08000b45  I2C2_EV_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b46-08000b47  I2C2_ER_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b48-08000b49  SPI1_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b4a-08000b4b  SPI2_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b4c-08000b4d  USART1_IRQHandler                   2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b4e-08000b4f  USART2_IRQHandler                   2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b50-08000b51  USART3_IRQHandler                   2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b52-08000b53  RTCAlarm_IRQHandler                 2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b54-08000b55  USB_FS_WKUP_IRQHandler              2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b56-08000b57  TIM8_BRK_TIM12_IRQHandler           2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b58-08000b59  TIM8_UP_TIM13_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b5a-08000b5b  TIM8_TRG_COM_TIM14_IRQHandler
                                                          2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b40-08000b41  TIM8_CC_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b42-08000b43  ADC3_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b44-08000b45  FSMC_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b46-08000b47  SDIO_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b48-08000b49  TIM5_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b4a-08000b4b  SPI3_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b4c-08000b4d  UART4_IRQHandler                    2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b4e-08000b4f  UART5_IRQHandler                    2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b50-08000b51  TIM6_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b52-08000b53  TIM7_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b54-08000b55  DMA2_Channel1_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b56-08000b57  DMA2_Channel2_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b58-08000b59  DMA2_Channel3_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b5a-08000b5b  DMA2_Channel4_5_IRQHandler
+  08000b5c-08000b5d  TIM8_CC_IRQHandler                  2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b5e-08000b5f  ADC3_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b60-08000b61  FSMC_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b62-08000b63  SDIO_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b64-08000b65  TIM5_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b66-08000b67  SPI3_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b68-08000b69  UART4_IRQHandler                    2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b6a-08000b6b  UART5_IRQHandler                    2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b6c-08000b6d  TIM6_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b6e-08000b6f  TIM7_IRQHandler                     2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b70-08000b71  DMA2_Channel1_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b72-08000b73  DMA2_Channel2_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b74-08000b75  DMA2_Channel3_IRQHandler            2   2  Code  RX  STM32F103xx_Vectors.o
+  08000b76-08000b77  DMA2_Channel4_5_IRQHandler
                                                          2   2  Code  RX  STM32F103xx_Vectors.o
-  08000b5c-08000bc5  SystemInit                        106   2  Code  RX  system_stm32f10x.o
-  08000bc6-08000cdf  SystemCoreClockUpdate             282   2  Code  RX  system_stm32f10x.o
-  08000ce0-08000d75  main                              150   2  Code  RX  main.o
-  08000d76-08000dc3  SysTick_Config                     78   2  Code  RX  main.o
-  08000dc4-08000e3d  main_ultraSoundInit               122   2  Code  RX  main.o
-  08000e3e-08000e4f  main_cbUSOnReady                   18   2  Code  RX  main.o
-  08000e50-08000f0d  usonic_cbOnTimer                  190   2  Code  RX  Ultrasound.o
-  08000f0e-08000f5b  USonicTrigger                      78   2  Code  RX  Ultrasound.o
-  08000f5c-08000fbd  USonicSetEchoTimeOut               98   2  Code  RX  Ultrasound.o
-  08000fbe-08001067  USonicISR                         170   2  Code  RX  Ultrasound.o
-  08001068-080010f5  ClockSetWaitStates                142   2  Code  RX  Clock.o
-  080010f6-08001197  PortInit                          162   2  Code  RX  Hal.o
-  08001198-08001239  EXTI15_10_IRQHandler              162   2  Code  RX  IRQ.o
-  0800123a-0800124f  TIM1_UP_TIM10_IRQHandler           22   2  Code  RX  Timer.o
-  08001250-080012d9  timer_IRQHandler                  138   2  Code  RX  Timer.o
-  080012da-080012ef  TIM2_IRQHandler                    22   2  Code  RX  Timer.o
-  080012f0-08001305  TIM3_IRQHandler                    22   2  Code  RX  Timer.o
-  08001306-0800131b  TIM4_IRQHandler                    22   2  Code  RX  Timer.o
-  0800131c-08001395  SEGGER_RTT_WriteNoLock            122   2  Code  RX  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  08001396-080013ef  _WriteBlocking                     90   2  Code  RX  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  080013f0-08001481  SEGGER_RTT_Write                  146   2  Code  RX  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  08001482-080014df  __SEGGER_RTL_putc                  94   2  Code  RX  prinops.o (libc_v7m_t_le_eabi.a)
-  080014e0-080014e7  Reset_Handler                       8   2  Code  RX  STM32F1xx_Startup.o
-  080014e8-080014f3  SetSysClock                        12   2  Code  RX  system_stm32f10x.o
-  080014f4-080015fb  SetSysClockTo72                   264   2  Code  RX  system_stm32f10x.o
-  080015fc-080018cf  main_UsonicExe                    724   2  Code  RX  main.o
-  080018d0-08001917  SysTick_Handler                    72   2  Code  RX  main.o
-  08001918-0800193b  EXTI2_US_ECHO_IRQHandler           36   2  Code  RX  main.o
-  0800193c-0800197b  __NVIC_SetPriority                 64   2  Code  RX  main.o
-  0800197c-080019a3  main_cbUSOnTrigger                 40   2  Code  RX  main.o
-  080019a4-08001ab3  USonicInit                        272   2  Code  RX  Ultrasound.o
-  08001ab4-08001bbb  USonicAddDevice                   264   2  Code  RX  Ultrasound.o
-  08001bbc-08001be7  USonicRead                         44   2  Code  RX  Ultrasound.o
-  08001be8-08001bfb  BSPInit                            20   2  Code  RX  BSP.o
-  08001bfc-08001c2b  HardFault_Handler                  48   2  Code  RX  BSP.o
-  08001c2c-08001d0b  Clock8MInternalInit               224   2  Code  RX  Clock.o
-  08001d0c-08001d33  IRQInit                            40   2  Code  RX  IRQ.o
-  08001d34-08001d63  __NVIC_ClearPendingIRQ             48   2  Code  RX  IRQ.o
-  08001d64-08001d93  __NVIC_EnableIRQ                   48   2  Code  RX  IRQ.o
-  08001d94-08001dbb  EXTI0_IRQHandler                   40   2  Code  RX  IRQ.o
-  08001dbc-08001de3  EXTI1_IRQHandler                   40   2  Code  RX  IRQ.o
-  08001de4-08001e13  EXTI2_IRQHandler                   48   2  Code  RX  IRQ.o
-  08001e14-08001e3b  EXTI3_IRQHandler                   40   2  Code  RX  IRQ.o
-  08001e3c-08001e63  EXTI4_IRQHandler                   40   2  Code  RX  IRQ.o
-  08001e64-08001ee7  EXTI9_5_IRQHandler                132   2  Code  RX  IRQ.o
-  08001ee8-08001f17  __NVIC_EnableIRQ                   48   2  Code  RX  Timer.o
-  08001f18-08001f93  TimerAddHook                      124   2  Code  RX  Timer.o
-  08001f94-08001f9b  abs                                 8   2  Code  RX  intops.o (libc_v7m_t_le_eabi.a)
-  08001f9c-08001fc3  __SEGGER_RTL_buffered_putchar
+  08000b78-08000be1  SystemInit                        106   2  Code  RX  system_stm32f10x.o
+  08000be2-08000cfb  SystemCoreClockUpdate             282   2  Code  RX  system_stm32f10x.o
+  08000cfc-08000dd1  main                              214   2  Code  RX  main.o
+  08000dd2-08000e1f  SysTick_Config                     78   2  Code  RX  main.o
+  08000e20-08000e99  main_ultraSoundInit               122   2  Code  RX  main.o
+  08000e9a-08000eab  main_cbUSOnReady                   18   2  Code  RX  main.o
+  08000eac-08000f69  usonic_cbOnTimer                  190   2  Code  RX  Ultrasound.o
+  08000f6a-08000fb7  USonicTrigger                      78   2  Code  RX  Ultrasound.o
+  08000fb8-08001019  USonicSetEchoTimeOut               98   2  Code  RX  Ultrasound.o
+  0800101a-080010c3  USonicISR                         170   2  Code  RX  Ultrasound.o
+  080010c4-08001151  ClockSetWaitStates                142   2  Code  RX  Clock.o
+  08001152-08001223  PortInit                          210   2  Code  RX  Hal.o
+  08001224-080012c5  EXTI15_10_IRQHandler              162   2  Code  RX  IRQ.o
+  080012c6-080012db  TIM1_UP_TIM10_IRQHandler           22   2  Code  RX  Timer.o
+  080012dc-08001365  timer_IRQHandler                  138   2  Code  RX  Timer.o
+  08001366-0800137b  TIM2_IRQHandler                    22   2  Code  RX  Timer.o
+  0800137c-08001391  TIM3_IRQHandler                    22   2  Code  RX  Timer.o
+  08001392-080013a7  TIM4_IRQHandler                    22   2  Code  RX  Timer.o
+  080013a8-08001421  SEGGER_RTT_WriteNoLock            122   2  Code  RX  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  08001422-0800147b  _WriteBlocking                     90   2  Code  RX  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0800147c-0800150d  SEGGER_RTT_Write                  146   2  Code  RX  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0800150e-0800156b  __SEGGER_RTL_putc                  94   2  Code  RX  prinops.o (libc_v7m_t_le_eabi.a)
+  0800156c-08001573  Reset_Handler                       8   2  Code  RX  STM32F1xx_Startup.o
+  08001574-0800157f  SetSysClock                        12   2  Code  RX  system_stm32f10x.o
+  08001580-08001687  SetSysClockTo72                   264   2  Code  RX  system_stm32f10x.o
+  08001688-0800195b  main_UsonicExe                    724   2  Code  RX  main.o
+  0800195c-080019a3  SysTick_Handler                    72   2  Code  RX  main.o
+  080019a4-080019c7  EXTI2_US_ECHO_IRQHandler           36   2  Code  RX  main.o
+  080019c8-08001a07  __NVIC_SetPriority                 64   2  Code  RX  main.o
+  08001a08-08001a2f  main_cbUSOnTrigger                 40   2  Code  RX  main.o
+  08001a30-08001b3f  USonicInit                        272   2  Code  RX  Ultrasound.o
+  08001b40-08001c47  USonicAddDevice                   264   2  Code  RX  Ultrasound.o
+  08001c48-08001c73  USonicRead                         44   2  Code  RX  Ultrasound.o
+  08001c74-08001c87  BSPInit                            20   2  Code  RX  BSP.o
+  08001c88-08001cb7  HardFault_Handler                  48   2  Code  RX  BSP.o
+  08001cb8-08001d97  Clock8MInternalInit               224   2  Code  RX  Clock.o
+  08001d98-08001dbf  IRQInit                            40   2  Code  RX  IRQ.o
+  08001dc0-08001def  __NVIC_ClearPendingIRQ             48   2  Code  RX  IRQ.o
+  08001df0-08001e1f  __NVIC_EnableIRQ                   48   2  Code  RX  IRQ.o
+  08001e20-08001e47  EXTI0_IRQHandler                   40   2  Code  RX  IRQ.o
+  08001e48-08001e6f  EXTI1_IRQHandler                   40   2  Code  RX  IRQ.o
+  08001e70-08001e9f  EXTI2_IRQHandler                   48   2  Code  RX  IRQ.o
+  08001ea0-08001ec7  EXTI3_IRQHandler                   40   2  Code  RX  IRQ.o
+  08001ec8-08001eef  EXTI4_IRQHandler                   40   2  Code  RX  IRQ.o
+  08001ef0-08001f73  EXTI9_5_IRQHandler                132   2  Code  RX  IRQ.o
+  08001f74-08001fa3  __NVIC_EnableIRQ                   48   2  Code  RX  Timer.o
+  08001fa4-0800201f  TimerAddHook                      124   2  Code  RX  Timer.o
+  08002020-08002027  abs                                 8   2  Code  RX  intops.o (libc_v7m_t_le_eabi.a)
+  08002028-0800204f  __SEGGER_RTL_buffered_putchar
                                                         40   2  Code  RX  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
-  08001fc4-08002017  printf                             84   2  Code  RX  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
-  08002018-0800205b  _WriteNoCheck                      68   2  Code  RX  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0800205c-08002076  .L.str                             27   1  Cnst  RO  main.o
-  08002077-08002085  .L.str.1                           15   1  Cnst  RO  main.o
-  08002086-0800209c  .L.str                             23   1  Cnst  RO  Ultrasound.o
-  0800209d-080020b3  .L.str.1                           23   1  Cnst  RO  BSP.o
-  080020b4-0800210a  .L.str.2                           87   1  Cnst  RO  BSP.o
-  0800210b-08002121  .L.str                             23   1  Cnst  RO  Clock.o
-  08002122-08002138  .L.str                             23   1  Cnst  RO  Timer.o
-  08002139-08002197  .L.str.1                           95   1  Cnst  RO  Timer.o
-  08002198-0800219e  .L.str.2                            7   1  Cnst  RO  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0800219f-08002207  .L.str.1                          105   1  Cnst  RO  Ultrasound.o
-  08002208-08002260  .L.str.1                           89   1  Cnst  RO  Clock.o
-  08002261-08002269  .L.str                              9   1  Cnst  RO  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0800226a-0800226b  ( UNUSED .=.+2 )                    2   -  ----  -   -
-  0800226c-0800226f  [.init_array]                       4   4  ----  --  STM32F1xx_Startup.o
-  08002270-0800227f  AHBPrescTable                      16   1  Cnst  RO  system_stm32f10x.o
-  08002280-0800228b  .L.str                             12   1  Cnst  RO  BSP.o
-  0800228c-0800228f  .L.str.1                            4   1  Cnst  RO  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  08002290-0800229f  __SEGGER_RTL_hex_uc                16   1  Cnst  RO  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  080022a0-080022af  __SEGGER_RTL_hex_lc                16   1  Cnst  RO  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  080022b0-080022cb  __SEGGER_init_heap                 28   4  Code  RX  SEGGER_crtinit_v7m_little.o
-  080022cc-080022eb  __SEGGER_init_ctors                32   4  Code  RX  SEGGER_crtinit_v7m_little.o
-  080022ec-08002313  __SEGGER_init_table__              40   4  Cnst  RO  [ Linker created ]
-  08002314-0800231b  __SEGGER_init_data__                8   4  Cnst  RO  [ Linker created ]
-  0800231c-0800232d  __SEGGER_init_zero                 18   2  Code  RX  SEGGER_crtinit_v7m_little.o
-  0800232e-08002341  __SEGGER_init_copy                 20   2  Code  RX  SEGGER_crtinit_v7m_little.o
-  08002342-1fffffff  ( UNUSED .=.+402644158 )   402 644 158
+  08002050-080020a3  printf                             84   2  Code  RX  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
+  080020a4-080020e7  _WriteNoCheck                      68   2  Code  RX  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  080020e8-08002102  .L.str                             27   1  Cnst  RO  main.o
+  08002103-08002111  .L.str.1                           15   1  Cnst  RO  main.o
+  08002112-08002128  .L.str                             23   1  Cnst  RO  Ultrasound.o
+  08002129-0800213f  .L.str.1                           23   1  Cnst  RO  BSP.o
+  08002140-08002196  .L.str.2                           87   1  Cnst  RO  BSP.o
+  08002197-080021ad  .L.str                             23   1  Cnst  RO  Clock.o
+  080021ae-080021c4  .L.str                             23   1  Cnst  RO  Timer.o
+  080021c5-08002223  .L.str.1                           95   1  Cnst  RO  Timer.o
+  08002224-0800222a  .L.str.2                            7   1  Cnst  RO  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0800222b-08002293  .L.str.1                          105   1  Cnst  RO  Ultrasound.o
+  08002294-080022ec  .L.str.1                           89   1  Cnst  RO  Clock.o
+  080022ed-080022f5  .L.str                              9   1  Cnst  RO  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  080022f6-080022f7  ( UNUSED .=.+2 )                    2   -  ----  -   -
+  080022f8-080022fb  [.init_array]                       4   4  ----  --  STM32F1xx_Startup.o
+  080022fc-0800230b  AHBPrescTable                      16   1  Cnst  RO  system_stm32f10x.o
+  0800230c-08002317  .L.str                             12   1  Cnst  RO  BSP.o
+  08002318-0800231b  .L.str.1                            4   1  Cnst  RO  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0800231c-0800232b  __SEGGER_RTL_hex_uc                16   1  Cnst  RO  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  0800232c-0800233b  __SEGGER_RTL_hex_lc                16   1  Cnst  RO  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  0800233c-08002357  __SEGGER_init_heap                 28   4  Code  RX  SEGGER_crtinit_v7m_little.o
+  08002358-08002377  __SEGGER_init_ctors                32   4  Code  RX  SEGGER_crtinit_v7m_little.o
+  08002378-0800239f  __SEGGER_init_table__              40   4  Cnst  RO  [ Linker created ]
+  080023a0-080023a7  __SEGGER_init_data__                8   4  Cnst  RO  [ Linker created ]
+  080023a8-080023b9  __SEGGER_init_zero                 18   2  Code  RX  SEGGER_crtinit_v7m_little.o
+  080023ba-080023cd  __SEGGER_init_copy                 20   2  Code  RX  SEGGER_crtinit_v7m_little.o
+  080023ce-1fffffff  ( UNUSED .=.+402644018 )   402 644 018
                                                              -  ----  -   -
   20000000-20000007  g_dTimerUsConst                     8   8  Zero  ZI  Ultrasound.o
   20000008-2000007f  _SEGGER_RTT                       120   4  Zero  ZI  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
   20000080-200000ab  g_USHandles                        44   4  Zero  ZI  main.o
   200000ac-200000bb  g_aTimerIrqHandle                  16   4  Zero  ZI  Timer.o
   200000bc-200000c7  g_Timer1Handle                     12   4  Zero  ZI  main.o
-  200000c8-200000d3  g_UsonicDist_prev                  12   4  Zero  ZI  main.o
-  200000d4-200000db  g_USonicStatus                      8   4  Zero  ZI  main.o
-  200000dc-200000e3  g_TimerHook                         8   4  Zero  ZI  Ultrasound.o
-  200000e4-200000e7  g_bUSonicTickReady                  4   4  Zero  ZI  main.o
-  200000e8-200000eb  g_UsonicDist                        4   4  Zero  ZI  main.o
-  200000ec-200000ef  g_bSystemTick                       4   4  Zero  ZI  main.o
-  200000f0-200000f3  g_nUsonicIdx                        4   4  Zero  ZI  main.o
-  200000f4-200000f7  g_pusonicIrqHandles                 4   4  Zero  ZI  Ultrasound.o
-  200000f8-200000fb  g_nTriggerConst                     4   4  Zero  ZI  Ultrasound.o
-  200000fc-200004fb  _acUpBuffer                     1 024   1  Zero  ZI  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  200004fc-2000050b  _acDownBuffer                      16   1  Zero  ZI  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  2000050c-2000050f  SystemCoreClock                     4   4  Init  RW  system_stm32f10x.o
-  20000510-20000513  g_nUSonicTick                       4   4  Init  RW  main.o
-  20000514-20000517  ( UNUSED .=.+4 )                    4   -  ----  -   -
-  20000518-20000717  [.bss.block.heap]                 512   8  None  ZI  [ Linker created ]
-  20000718-20004bff  ( UNUSED .=.+17640 )           17 640   -  ----  -   -
+  200000c8-200000d3  g_Timer4Handle                     12   4  Zero  ZI  main.o
+  200000d4-200000df  g_UsonicDist_prev                  12   4  Zero  ZI  main.o
+  200000e0-200000e7  g_USonicStatus                      8   4  Zero  ZI  main.o
+  200000e8-200000ef  g_TimerHook                         8   4  Zero  ZI  Ultrasound.o
+  200000f0-200000f3  g_bUSonicTickReady                  4   4  Zero  ZI  main.o
+  200000f4-200000f7  g_UsonicDist                        4   4  Zero  ZI  main.o
+  200000f8-200000fb  g_bSystemTick                       4   4  Zero  ZI  main.o
+  200000fc-200000ff  g_nUsonicIdx                        4   4  Zero  ZI  main.o
+  20000100-20000103  g_pusonicIrqHandles                 4   4  Zero  ZI  Ultrasound.o
+  20000104-20000107  g_nTriggerConst                     4   4  Zero  ZI  Ultrasound.o
+  20000108-20000507  _acUpBuffer                     1 024   1  Zero  ZI  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  20000508-20000517  _acDownBuffer                      16   1  Zero  ZI  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  20000518-2000051b  SystemCoreClock                     4   4  Init  RW  system_stm32f10x.o
+  2000051c-2000051f  g_nUSonicTick                       4   4  Init  RW  main.o
+  20000520-2000071f  [.bss.block.heap]                 512   8  None  ZI  [ Linker created ]
+  20000720-20004bff  ( UNUSED .=.+17632 )           17 632   -  ----  -   -
   20004c00-20004fff  [.bss.block.stack]              1 024   8  None  ZI  [ Linker created ]
 
 
@@ -286,299 +286,300 @@ Symbols by value and then by name:
   0x08000579  memcpy                             80      4  Code  Wk  strasmops_arm.o (libc_v7m_t_le_eabi.a)
   0x08000585  __aeabi_memcpy4                            4  Code  Wk  strasmops_arm.o (libc_v7m_t_le_eabi.a)
   0x08000585  __aeabi_memcpy8                            4  Code  Wk  strasmops_arm.o (libc_v7m_t_le_eabi.a)
-  0x080005C9  TimerInit                         478      4  Code  Gb  Timer.o
-  0x080007A7  NMI_Handler                                2  Code  Wk  STM32F103xx_Vectors.o
-  0x080007A9  __SEGGER_RTL_vfprintf             846      4  Code  Gb  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  0x080007A9  __SEGGER_RTL_vfprintf_int_nwp
+  0x080005C9  TimerInit                         506      4  Code  Gb  Timer.o
+  0x080007C3  NMI_Handler                                2  Code  Wk  STM32F103xx_Vectors.o
+  0x080007C5  __SEGGER_RTL_vfprintf             846      4  Code  Gb  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  0x080007C5  __SEGGER_RTL_vfprintf_int_nwp
                                                 846      4  Code  Gb  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  0x08000AF7  SVC_Handler                                2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000AF9  PendSV_Handler                             2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000AFB  WWDG_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000AFD  PVD_IRQHandler                             2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000AFF  TAMPER_IRQHandler                          2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B01  RTC_IRQHandler                             2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B03  FLASH_IRQHandler                           2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B05  RCC_IRQHandler                             2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B07  DMA1_Channel1_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B09  DMA1_Channel2_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B0B  DMA1_Channel3_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B0D  DMA1_Channel4_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B0F  DMA1_Channel5_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B11  DMA1_Channel6_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B13  DMA1_Channel7_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B15  ADC_IRQHandler                             2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B17  CAN1_TX_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B19  CAN1_RX0_IRQHandler                        2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B1B  CAN1_RX1_IRQHandler                        2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B1D  CAN1_SCE_IRQHandler                        2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B1F  TIM1_BRK_TIM9_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B21  TIM1_TRG_COM_TIM11_IRQHandler
+  0x08000B13  SVC_Handler                                2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B15  PendSV_Handler                             2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B17  WWDG_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B19  PVD_IRQHandler                             2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B1B  TAMPER_IRQHandler                          2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B1D  RTC_IRQHandler                             2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B1F  FLASH_IRQHandler                           2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B21  RCC_IRQHandler                             2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B23  DMA1_Channel1_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B25  DMA1_Channel2_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B27  DMA1_Channel3_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B29  DMA1_Channel4_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B2B  DMA1_Channel5_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B2D  DMA1_Channel6_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B2F  DMA1_Channel7_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B31  ADC_IRQHandler                             2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B33  CAN1_TX_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B35  CAN1_RX0_IRQHandler                        2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B37  CAN1_RX1_IRQHandler                        2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B39  CAN1_SCE_IRQHandler                        2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B3B  TIM1_BRK_TIM9_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B3D  TIM1_TRG_COM_TIM11_IRQHandler
                                                          2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B23  TIM1_CC_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B25  I2C1_EV_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B27  I2C1_ER_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B29  I2C2_EV_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B2B  I2C2_ER_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B2D  SPI1_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B2F  SPI2_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B31  USART1_IRQHandler                          2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B33  USART2_IRQHandler                          2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B35  USART3_IRQHandler                          2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B37  RTCAlarm_IRQHandler                        2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B39  USB_FS_WKUP_IRQHandler                     2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B3B  TIM8_BRK_TIM12_IRQHandler                  2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B3D  TIM8_UP_TIM13_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B3F  TIM8_TRG_COM_TIM14_IRQHandler
+  0x08000B3F  TIM1_CC_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B41  I2C1_EV_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B43  I2C1_ER_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B45  I2C2_EV_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B47  I2C2_ER_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B49  SPI1_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B4B  SPI2_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B4D  USART1_IRQHandler                          2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B4F  USART2_IRQHandler                          2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B51  USART3_IRQHandler                          2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B53  RTCAlarm_IRQHandler                        2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B55  USB_FS_WKUP_IRQHandler                     2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B57  TIM8_BRK_TIM12_IRQHandler                  2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B59  TIM8_UP_TIM13_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B5B  TIM8_TRG_COM_TIM14_IRQHandler
                                                          2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B41  TIM8_CC_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B43  ADC3_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B45  FSMC_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B47  SDIO_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B49  TIM5_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B4B  SPI3_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B4D  UART4_IRQHandler                           2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B4F  UART5_IRQHandler                           2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B51  TIM6_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B53  TIM7_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B55  DMA2_Channel1_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B57  DMA2_Channel2_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B59  DMA2_Channel3_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B5B  DMA2_Channel4_5_IRQHandler
+  0x08000B5D  TIM8_CC_IRQHandler                         2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B5F  ADC3_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B61  FSMC_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B63  SDIO_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B65  TIM5_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B67  SPI3_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B69  UART4_IRQHandler                           2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B6B  UART5_IRQHandler                           2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B6D  TIM6_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B6F  TIM7_IRQHandler                            2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B71  DMA2_Channel1_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B73  DMA2_Channel2_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B75  DMA2_Channel3_IRQHandler                   2  Code  Wk  STM32F103xx_Vectors.o
+  0x08000B77  DMA2_Channel4_5_IRQHandler
                                                          2  Code  Wk  STM32F103xx_Vectors.o
-  0x08000B5D  SystemInit                        106      2  Code  Gb  system_stm32f10x.o
-  0x08000BC7  SystemCoreClockUpdate             282      2  Code  Gb  system_stm32f10x.o
-  0x08000CE1  main                              150      2  Code  Gb  main.o
-  0x08000D77  SysTick_Config                     78      2  Code  Lc  main.o
-  0x08000DC5  main_ultraSoundInit               122      2  Code  Lc  main.o
-  0x08000E3F  main_cbUSOnReady                   18      2  Code  Lc  main.o
-  0x08000E51  usonic_cbOnTimer                  190      2  Code  Lc  Ultrasound.o
-  0x08000F0F  USonicTrigger                      78      2  Code  Gb  Ultrasound.o
-  0x08000F5D  USonicSetEchoTimeOut               98      2  Code  Gb  Ultrasound.o
-  0x08000FBF  USonicISR                         170      2  Code  Gb  Ultrasound.o
-  0x08001069  ClockSetWaitStates                142      2  Code  Gb  Clock.o
-  0x080010F7  PortInit                          162      2  Code  Gb  Hal.o
-  0x08001199  EXTI15_10_IRQHandler              162      2  Code  Gb  IRQ.o
-  0x0800123B  TIM1_UP_TIM10_IRQHandler           22      2  Code  Gb  Timer.o
-  0x08001251  timer_IRQHandler                  138      2  Code  Lc  Timer.o
-  0x080012DB  TIM2_IRQHandler                    22      2  Code  Gb  Timer.o
-  0x080012F1  TIM3_IRQHandler                    22      2  Code  Gb  Timer.o
-  0x08001307  TIM4_IRQHandler                    22      2  Code  Gb  Timer.o
-  0x0800131D  SEGGER_RTT_WriteNoLock            122      2  Code  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x08001397  _WriteBlocking                     90      2  Code  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x080013F1  SEGGER_RTT_Write                  146      2  Code  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x08001483  __SEGGER_RTL_putc                  94      2  Code  Gb  prinops.o (libc_v7m_t_le_eabi.a)
-  0x080014E1  Reset_Handler                              2  Code  Gb  STM32F1xx_Startup.o
-  0x080014E1  reset_handler                              2  Code  Gb  STM32F1xx_Startup.o
-  0x080014E9  SetSysClock                        12      2  Code  Lc  system_stm32f10x.o
-  0x080014F5  SetSysClockTo72                   264      2  Code  Lc  system_stm32f10x.o
-  0x080015FD  main_UsonicExe                    724      2  Code  Lc  main.o
-  0x080018D1  SysTick_Handler                    72      2  Code  Gb  main.o
-  0x08001919  EXTI2_US_ECHO_IRQHandler           36      2  Code  Gb  main.o
-  0x0800193D  __NVIC_SetPriority                 64      2  Code  Lc  main.o
-  0x0800197D  main_cbUSOnTrigger                 40      2  Code  Lc  main.o
-  0x080019A5  USonicInit                        272      2  Code  Gb  Ultrasound.o
-  0x08001AB5  USonicAddDevice                   264      2  Code  Gb  Ultrasound.o
-  0x08001BBD  USonicRead                         44      2  Code  Gb  Ultrasound.o
-  0x08001BE9  BSPInit                            20      2  Code  Gb  BSP.o
-  0x08001BFD  HardFault_Handler                  48      2  Code  Gb  BSP.o
-  0x08001C2D  Clock8MInternalInit               224      2  Code  Gb  Clock.o
-  0x08001D0D  IRQInit                            40      2  Code  Gb  IRQ.o
-  0x08001D35  __NVIC_ClearPendingIRQ             48      2  Code  Lc  IRQ.o
-  0x08001D65  __NVIC_EnableIRQ                   48      2  Code  Lc  IRQ.o
-  0x08001D95  EXTI0_IRQHandler                   40      2  Code  Gb  IRQ.o
-  0x08001DBD  EXTI1_IRQHandler                   40      2  Code  Gb  IRQ.o
-  0x08001DE5  EXTI2_IRQHandler                   48      2  Code  Gb  IRQ.o
-  0x08001E15  EXTI3_IRQHandler                   40      2  Code  Gb  IRQ.o
-  0x08001E3D  EXTI4_IRQHandler                   40      2  Code  Gb  IRQ.o
-  0x08001E65  EXTI9_5_IRQHandler                132      2  Code  Gb  IRQ.o
-  0x08001EE9  __NVIC_EnableIRQ                   48      2  Code  Lc  Timer.o
-  0x08001F19  TimerAddHook                      124      2  Code  Gb  Timer.o
-  0x08001F95  abs                                 8      2  Code  Gb  intops.o (libc_v7m_t_le_eabi.a)
-  0x08001F9D  __SEGGER_RTL_buffered_putchar
+  0x08000B79  SystemInit                        106      2  Code  Gb  system_stm32f10x.o
+  0x08000BE3  SystemCoreClockUpdate             282      2  Code  Gb  system_stm32f10x.o
+  0x08000CFD  main                              214      2  Code  Gb  main.o
+  0x08000DD3  SysTick_Config                     78      2  Code  Lc  main.o
+  0x08000E21  main_ultraSoundInit               122      2  Code  Lc  main.o
+  0x08000E9B  main_cbUSOnReady                   18      2  Code  Lc  main.o
+  0x08000EAD  usonic_cbOnTimer                  190      2  Code  Lc  Ultrasound.o
+  0x08000F6B  USonicTrigger                      78      2  Code  Gb  Ultrasound.o
+  0x08000FB9  USonicSetEchoTimeOut               98      2  Code  Gb  Ultrasound.o
+  0x0800101B  USonicISR                         170      2  Code  Gb  Ultrasound.o
+  0x080010C5  ClockSetWaitStates                142      2  Code  Gb  Clock.o
+  0x08001153  PortInit                          210      2  Code  Gb  Hal.o
+  0x08001225  EXTI15_10_IRQHandler              162      2  Code  Gb  IRQ.o
+  0x080012C7  TIM1_UP_TIM10_IRQHandler           22      2  Code  Gb  Timer.o
+  0x080012DD  timer_IRQHandler                  138      2  Code  Lc  Timer.o
+  0x08001367  TIM2_IRQHandler                    22      2  Code  Gb  Timer.o
+  0x0800137D  TIM3_IRQHandler                    22      2  Code  Gb  Timer.o
+  0x08001393  TIM4_IRQHandler                    22      2  Code  Gb  Timer.o
+  0x080013A9  SEGGER_RTT_WriteNoLock            122      2  Code  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x08001423  _WriteBlocking                     90      2  Code  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x0800147D  SEGGER_RTT_Write                  146      2  Code  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x0800150F  __SEGGER_RTL_putc                  94      2  Code  Gb  prinops.o (libc_v7m_t_le_eabi.a)
+  0x0800156D  Reset_Handler                              2  Code  Gb  STM32F1xx_Startup.o
+  0x0800156D  reset_handler                              2  Code  Gb  STM32F1xx_Startup.o
+  0x08001575  SetSysClock                        12      2  Code  Lc  system_stm32f10x.o
+  0x08001581  SetSysClockTo72                   264      2  Code  Lc  system_stm32f10x.o
+  0x08001689  main_UsonicExe                    724      2  Code  Lc  main.o
+  0x0800195D  SysTick_Handler                    72      2  Code  Gb  main.o
+  0x080019A5  EXTI2_US_ECHO_IRQHandler           36      2  Code  Gb  main.o
+  0x080019C9  __NVIC_SetPriority                 64      2  Code  Lc  main.o
+  0x08001A09  main_cbUSOnTrigger                 40      2  Code  Lc  main.o
+  0x08001A31  USonicInit                        272      2  Code  Gb  Ultrasound.o
+  0x08001B41  USonicAddDevice                   264      2  Code  Gb  Ultrasound.o
+  0x08001C49  USonicRead                         44      2  Code  Gb  Ultrasound.o
+  0x08001C75  BSPInit                            20      2  Code  Gb  BSP.o
+  0x08001C89  HardFault_Handler                  48      2  Code  Gb  BSP.o
+  0x08001CB9  Clock8MInternalInit               224      2  Code  Gb  Clock.o
+  0x08001D99  IRQInit                            40      2  Code  Gb  IRQ.o
+  0x08001DC1  __NVIC_ClearPendingIRQ             48      2  Code  Lc  IRQ.o
+  0x08001DF1  __NVIC_EnableIRQ                   48      2  Code  Lc  IRQ.o
+  0x08001E21  EXTI0_IRQHandler                   40      2  Code  Gb  IRQ.o
+  0x08001E49  EXTI1_IRQHandler                   40      2  Code  Gb  IRQ.o
+  0x08001E71  EXTI2_IRQHandler                   48      2  Code  Gb  IRQ.o
+  0x08001EA1  EXTI3_IRQHandler                   40      2  Code  Gb  IRQ.o
+  0x08001EC9  EXTI4_IRQHandler                   40      2  Code  Gb  IRQ.o
+  0x08001EF1  EXTI9_5_IRQHandler                132      2  Code  Gb  IRQ.o
+  0x08001F75  __NVIC_EnableIRQ                   48      2  Code  Lc  Timer.o
+  0x08001FA5  TimerAddHook                      124      2  Code  Gb  Timer.o
+  0x08002021  abs                                 8      2  Code  Gb  intops.o (libc_v7m_t_le_eabi.a)
+  0x08002029  __SEGGER_RTL_buffered_putchar
                                                  40      2  Code  Lc  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
-  0x08001FC5  printf                             84      2  Code  Gb  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
-  0x08001FC5  printf_rtt                         84      2  Code  Gb  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
-  0x08002019  _WriteNoCheck                      68      2  Code  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x0800205C  .L.str                             27         Cnst  Lc  main.o
-  0x08002077  .L.str.1                           15         Cnst  Lc  main.o
-  0x08002086  .L.str                             23         Cnst  Lc  Ultrasound.o
-  0x0800209D  .L.str.1                           23         Cnst  Lc  BSP.o
-  0x080020B4  .L.str.2                           87         Cnst  Lc  BSP.o
-  0x0800210B  .L.str                             23         Cnst  Lc  Clock.o
-  0x08002122  .L.str                             23         Cnst  Lc  Timer.o
-  0x08002139  .L.str.1                           95         Cnst  Lc  Timer.o
-  0x08002198  .L.str.2                            7         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x0800219F  .L.str.1                          105         Cnst  Lc  Ultrasound.o
-  0x08002208  .L.str.1                           89         Cnst  Lc  Clock.o
-  0x08002261  .L.str                              9         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x0800226C  __ctors_start__                               ----  Gb  [ Linker created ]
-  0x08002270  AHBPrescTable                      16         Cnst  Gb  system_stm32f10x.o
-  0x08002270  __ctors_end__                                 ----  Gb  [ Linker created ]
-  0x08002280  .L.str                             12         Cnst  Lc  BSP.o
-  0x0800228C  .L.str.1                            4         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x08002290  __SEGGER_RTL_hex_uc                16         Cnst  Lc  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  0x080022A0  __SEGGER_RTL_hex_lc                16         Cnst  Lc  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  0x080022B1  __SEGGER_init_heap                 20      4  Code  Wk  SEGGER_crtinit_v7m_little.o
-  0x080022CD  __SEGGER_init_ctors                24      4  Code  Wk  SEGGER_crtinit_v7m_little.o
-  0x080022EC  __SEGGER_init_table__            [40]      4  Cnst  Lc  [ Linker created ]
-  0x08002314  __SEGGER_init_data__              [8]      4  Cnst  Lc  [ Linker created ]
-  0x0800231D  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit_v7m_little.o
-  0x0800232F  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit_v7m_little.o
+  0x08002051  printf                             84      2  Code  Gb  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
+  0x08002051  printf_rtt                         84      2  Code  Gb  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
+  0x080020A5  _WriteNoCheck                      68      2  Code  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x080020E8  .L.str                             27         Cnst  Lc  main.o
+  0x08002103  .L.str.1                           15         Cnst  Lc  main.o
+  0x08002112  .L.str                             23         Cnst  Lc  Ultrasound.o
+  0x08002129  .L.str.1                           23         Cnst  Lc  BSP.o
+  0x08002140  .L.str.2                           87         Cnst  Lc  BSP.o
+  0x08002197  .L.str                             23         Cnst  Lc  Clock.o
+  0x080021AE  .L.str                             23         Cnst  Lc  Timer.o
+  0x080021C5  .L.str.1                           95         Cnst  Lc  Timer.o
+  0x08002224  .L.str.2                            7         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x0800222B  .L.str.1                          105         Cnst  Lc  Ultrasound.o
+  0x08002294  .L.str.1                           89         Cnst  Lc  Clock.o
+  0x080022ED  .L.str                              9         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x080022F8  __ctors_start__                               ----  Gb  [ Linker created ]
+  0x080022FC  AHBPrescTable                      16         Cnst  Gb  system_stm32f10x.o
+  0x080022FC  __ctors_end__                                 ----  Gb  [ Linker created ]
+  0x0800230C  .L.str                             12         Cnst  Lc  BSP.o
+  0x08002318  .L.str.1                            4         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x0800231C  __SEGGER_RTL_hex_uc                16         Cnst  Lc  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  0x0800232C  __SEGGER_RTL_hex_lc                16         Cnst  Lc  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  0x0800233D  __SEGGER_init_heap                 20      4  Code  Wk  SEGGER_crtinit_v7m_little.o
+  0x08002359  __SEGGER_init_ctors                24      4  Code  Wk  SEGGER_crtinit_v7m_little.o
+  0x08002378  __SEGGER_init_table__            [40]      4  Cnst  Lc  [ Linker created ]
+  0x080023A0  __SEGGER_init_data__              [8]      4  Cnst  Lc  [ Linker created ]
+  0x080023A9  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit_v7m_little.o
+  0x080023BB  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit_v7m_little.o
   0x20000000  g_dTimerUsConst                     8      8  Zero  Lc  Ultrasound.o
   0x20000008  _SEGGER_RTT                       120      4  Zero  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
   0x20000080  g_USHandles                        44      4  Zero  Lc  main.o
   0x200000AC  g_aTimerIrqHandle                  16      4  Zero  Lc  Timer.o
   0x200000BC  g_Timer1Handle                     12      4  Zero  Lc  main.o
-  0x200000C8  g_UsonicDist_prev                  12      4  Zero  Lc  main.o
-  0x200000D4  g_USonicStatus                      8      4  Zero  Lc  main.o
-  0x200000DC  g_TimerHook                         8      4  Zero  Lc  Ultrasound.o
-  0x200000E4  g_bUSonicTickReady                  4      4  Zero  Lc  main.o
-  0x200000E8  g_UsonicDist                        4      4  Zero  Lc  main.o
-  0x200000EC  g_bSystemTick                       4      4  Zero  Lc  main.o
-  0x200000F0  g_nUsonicIdx                        4      4  Zero  Lc  main.o
-  0x200000F4  g_pusonicIrqHandles                 4      4  Zero  Lc  Ultrasound.o
-  0x200000F8  g_nTriggerConst                     4      4  Zero  Lc  Ultrasound.o
-  0x200000FC  _acUpBuffer                     1 024         Zero  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x200004FC  _acDownBuffer                      16         Zero  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  0x2000050C  SystemCoreClock                     4      4  Init  Gb  system_stm32f10x.o
-  0x20000510  g_nUSonicTick                       4      4  Init  Lc  main.o
-  0x20000518  __heap_start__                                ----  Gb  [ Linker created ]
-  0x20000718  __heap_end__                                  ----  Gb  [ Linker created ]
+  0x200000C8  g_Timer4Handle                     12      4  Zero  Lc  main.o
+  0x200000D4  g_UsonicDist_prev                  12      4  Zero  Lc  main.o
+  0x200000E0  g_USonicStatus                      8      4  Zero  Lc  main.o
+  0x200000E8  g_TimerHook                         8      4  Zero  Lc  Ultrasound.o
+  0x200000F0  g_bUSonicTickReady                  4      4  Zero  Lc  main.o
+  0x200000F4  g_UsonicDist                        4      4  Zero  Lc  main.o
+  0x200000F8  g_bSystemTick                       4      4  Zero  Lc  main.o
+  0x200000FC  g_nUsonicIdx                        4      4  Zero  Lc  main.o
+  0x20000100  g_pusonicIrqHandles                 4      4  Zero  Lc  Ultrasound.o
+  0x20000104  g_nTriggerConst                     4      4  Zero  Lc  Ultrasound.o
+  0x20000108  _acUpBuffer                     1 024         Zero  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x20000508  _acDownBuffer                      16         Zero  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  0x20000518  SystemCoreClock                     4      4  Init  Gb  system_stm32f10x.o
+  0x2000051C  g_nUSonicTick                       4      4  Init  Lc  main.o
+  0x20000520  __heap_start__                                ----  Gb  [ Linker created ]
+  0x20000720  __heap_end__                                  ----  Gb  [ Linker created ]
   0x20005000  __stack_end__                                 ----  Gb  [ Linker created ]
 
 Symbols by name and then by address:
 
   Symbol                          Value        Size  Align  Type      Object File
   -------------------------  ----------  ----------  -----  --------  -----------
-  .L.str                     0x0800205C          27         Cnst  Lc  main.o
-  .L.str                     0x08002086          23         Cnst  Lc  Ultrasound.o
-  .L.str                     0x0800210B          23         Cnst  Lc  Clock.o
-  .L.str                     0x08002122          23         Cnst  Lc  Timer.o
-  .L.str                     0x08002261           9         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  .L.str                     0x08002280          12         Cnst  Lc  BSP.o
-  .L.str.1                   0x08002077          15         Cnst  Lc  main.o
-  .L.str.1                   0x0800209D          23         Cnst  Lc  BSP.o
-  .L.str.1                   0x08002139          95         Cnst  Lc  Timer.o
-  .L.str.1                   0x0800219F         105         Cnst  Lc  Ultrasound.o
-  .L.str.1                   0x08002208          89         Cnst  Lc  Clock.o
-  .L.str.1                   0x0800228C           4         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  .L.str.2                   0x080020B4          87         Cnst  Lc  BSP.o
-  .L.str.2                   0x08002198           7         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  ADC3_IRQHandler            0x08000B43                  2  Code  Wk  STM32F103xx_Vectors.o
-  ADC_IRQHandler             0x08000B15                  2  Code  Wk  STM32F103xx_Vectors.o
-  AHBPrescTable              0x08002270          16         Cnst  Gb  system_stm32f10x.o
-  BSPInit                    0x08001BE9          20      2  Code  Gb  BSP.o
-  CAN1_RX0_IRQHandler        0x08000B19                  2  Code  Wk  STM32F103xx_Vectors.o
-  CAN1_RX1_IRQHandler        0x08000B1B                  2  Code  Wk  STM32F103xx_Vectors.o
-  CAN1_SCE_IRQHandler        0x08000B1D                  2  Code  Wk  STM32F103xx_Vectors.o
-  CAN1_TX_IRQHandler         0x08000B17                  2  Code  Wk  STM32F103xx_Vectors.o
-  Clock8MInternalInit        0x08001C2D         224      2  Code  Gb  Clock.o
-  ClockSetWaitStates         0x08001069         142      2  Code  Gb  Clock.o
-  DMA1_Channel1_IRQHandler   0x08000B07                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA1_Channel2_IRQHandler   0x08000B09                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA1_Channel3_IRQHandler   0x08000B0B                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA1_Channel4_IRQHandler   0x08000B0D                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA1_Channel5_IRQHandler   0x08000B0F                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA1_Channel6_IRQHandler   0x08000B11                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA1_Channel7_IRQHandler   0x08000B13                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA2_Channel1_IRQHandler   0x08000B55                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA2_Channel2_IRQHandler   0x08000B57                  2  Code  Wk  STM32F103xx_Vectors.o
-  DMA2_Channel3_IRQHandler   0x08000B59                  2  Code  Wk  STM32F103xx_Vectors.o
+  .L.str                     0x080020E8          27         Cnst  Lc  main.o
+  .L.str                     0x08002112          23         Cnst  Lc  Ultrasound.o
+  .L.str                     0x08002197          23         Cnst  Lc  Clock.o
+  .L.str                     0x080021AE          23         Cnst  Lc  Timer.o
+  .L.str                     0x080022ED           9         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  .L.str                     0x0800230C          12         Cnst  Lc  BSP.o
+  .L.str.1                   0x08002103          15         Cnst  Lc  main.o
+  .L.str.1                   0x08002129          23         Cnst  Lc  BSP.o
+  .L.str.1                   0x080021C5          95         Cnst  Lc  Timer.o
+  .L.str.1                   0x0800222B         105         Cnst  Lc  Ultrasound.o
+  .L.str.1                   0x08002294          89         Cnst  Lc  Clock.o
+  .L.str.1                   0x08002318           4         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  .L.str.2                   0x08002140          87         Cnst  Lc  BSP.o
+  .L.str.2                   0x08002224           7         Cnst  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  ADC3_IRQHandler            0x08000B5F                  2  Code  Wk  STM32F103xx_Vectors.o
+  ADC_IRQHandler             0x08000B31                  2  Code  Wk  STM32F103xx_Vectors.o
+  AHBPrescTable              0x080022FC          16         Cnst  Gb  system_stm32f10x.o
+  BSPInit                    0x08001C75          20      2  Code  Gb  BSP.o
+  CAN1_RX0_IRQHandler        0x08000B35                  2  Code  Wk  STM32F103xx_Vectors.o
+  CAN1_RX1_IRQHandler        0x08000B37                  2  Code  Wk  STM32F103xx_Vectors.o
+  CAN1_SCE_IRQHandler        0x08000B39                  2  Code  Wk  STM32F103xx_Vectors.o
+  CAN1_TX_IRQHandler         0x08000B33                  2  Code  Wk  STM32F103xx_Vectors.o
+  Clock8MInternalInit        0x08001CB9         224      2  Code  Gb  Clock.o
+  ClockSetWaitStates         0x080010C5         142      2  Code  Gb  Clock.o
+  DMA1_Channel1_IRQHandler   0x08000B23                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA1_Channel2_IRQHandler   0x08000B25                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA1_Channel3_IRQHandler   0x08000B27                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA1_Channel4_IRQHandler   0x08000B29                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA1_Channel5_IRQHandler   0x08000B2B                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA1_Channel6_IRQHandler   0x08000B2D                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA1_Channel7_IRQHandler   0x08000B2F                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA2_Channel1_IRQHandler   0x08000B71                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA2_Channel2_IRQHandler   0x08000B73                  2  Code  Wk  STM32F103xx_Vectors.o
+  DMA2_Channel3_IRQHandler   0x08000B75                  2  Code  Wk  STM32F103xx_Vectors.o
   DMA2_Channel4_5_IRQHandler
-                             0x08000B5B                  2  Code  Wk  STM32F103xx_Vectors.o
-  EXTI0_IRQHandler           0x08001D95          40      2  Code  Gb  IRQ.o
-  EXTI15_10_IRQHandler       0x08001199         162      2  Code  Gb  IRQ.o
-  EXTI1_IRQHandler           0x08001DBD          40      2  Code  Gb  IRQ.o
-  EXTI2_IRQHandler           0x08001DE5          48      2  Code  Gb  IRQ.o
-  EXTI2_US_ECHO_IRQHandler   0x08001919          36      2  Code  Gb  main.o
-  EXTI3_IRQHandler           0x08001E15          40      2  Code  Gb  IRQ.o
-  EXTI4_IRQHandler           0x08001E3D          40      2  Code  Gb  IRQ.o
-  EXTI9_5_IRQHandler         0x08001E65         132      2  Code  Gb  IRQ.o
-  FLASH_IRQHandler           0x08000B03                  2  Code  Wk  STM32F103xx_Vectors.o
-  FSMC_IRQHandler            0x08000B45                  2  Code  Wk  STM32F103xx_Vectors.o
-  HardFault_Handler          0x08001BFD          48      2  Code  Gb  BSP.o
-  I2C1_ER_IRQHandler         0x08000B27                  2  Code  Wk  STM32F103xx_Vectors.o
-  I2C1_EV_IRQHandler         0x08000B25                  2  Code  Wk  STM32F103xx_Vectors.o
-  I2C2_ER_IRQHandler         0x08000B2B                  2  Code  Wk  STM32F103xx_Vectors.o
-  I2C2_EV_IRQHandler         0x08000B29                  2  Code  Wk  STM32F103xx_Vectors.o
-  IRQInit                    0x08001D0D          40      2  Code  Gb  IRQ.o
-  NMI_Handler                0x080007A7                  2  Code  Wk  STM32F103xx_Vectors.o
-  PVD_IRQHandler             0x08000AFD                  2  Code  Wk  STM32F103xx_Vectors.o
-  PendSV_Handler             0x08000AF9                  2  Code  Wk  STM32F103xx_Vectors.o
-  PortInit                   0x080010F7         162      2  Code  Gb  Hal.o
-  RCC_IRQHandler             0x08000B05                  2  Code  Wk  STM32F103xx_Vectors.o
-  RTCAlarm_IRQHandler        0x08000B37                  2  Code  Wk  STM32F103xx_Vectors.o
-  RTC_IRQHandler             0x08000B01                  2  Code  Wk  STM32F103xx_Vectors.o
-  Reset_Handler              0x080014E1                  2  Code  Gb  STM32F1xx_Startup.o
-  SDIO_IRQHandler            0x08000B47                  2  Code  Wk  STM32F103xx_Vectors.o
-  SEGGER_RTT_Write           0x080013F1         146      2  Code  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  SEGGER_RTT_WriteNoLock     0x0800131D         122      2  Code  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  SPI1_IRQHandler            0x08000B2D                  2  Code  Wk  STM32F103xx_Vectors.o
-  SPI2_IRQHandler            0x08000B2F                  2  Code  Wk  STM32F103xx_Vectors.o
-  SPI3_IRQHandler            0x08000B4B                  2  Code  Wk  STM32F103xx_Vectors.o
-  SVC_Handler                0x08000AF7                  2  Code  Wk  STM32F103xx_Vectors.o
-  SetSysClock                0x080014E9          12      2  Code  Lc  system_stm32f10x.o
-  SetSysClockTo72            0x080014F5         264      2  Code  Lc  system_stm32f10x.o
-  SysTick_Config             0x08000D77          78      2  Code  Lc  main.o
-  SysTick_Handler            0x080018D1          72      2  Code  Gb  main.o
-  SystemCoreClock            0x2000050C           4      4  Init  Gb  system_stm32f10x.o
-  SystemCoreClockUpdate      0x08000BC7         282      2  Code  Gb  system_stm32f10x.o
-  SystemInit                 0x08000B5D         106      2  Code  Gb  system_stm32f10x.o
-  TAMPER_IRQHandler          0x08000AFF                  2  Code  Wk  STM32F103xx_Vectors.o
-  TIM1_BRK_TIM9_IRQHandler   0x08000B1F                  2  Code  Wk  STM32F103xx_Vectors.o
-  TIM1_CC_IRQHandler         0x08000B23                  2  Code  Wk  STM32F103xx_Vectors.o
+                             0x08000B77                  2  Code  Wk  STM32F103xx_Vectors.o
+  EXTI0_IRQHandler           0x08001E21          40      2  Code  Gb  IRQ.o
+  EXTI15_10_IRQHandler       0x08001225         162      2  Code  Gb  IRQ.o
+  EXTI1_IRQHandler           0x08001E49          40      2  Code  Gb  IRQ.o
+  EXTI2_IRQHandler           0x08001E71          48      2  Code  Gb  IRQ.o
+  EXTI2_US_ECHO_IRQHandler   0x080019A5          36      2  Code  Gb  main.o
+  EXTI3_IRQHandler           0x08001EA1          40      2  Code  Gb  IRQ.o
+  EXTI4_IRQHandler           0x08001EC9          40      2  Code  Gb  IRQ.o
+  EXTI9_5_IRQHandler         0x08001EF1         132      2  Code  Gb  IRQ.o
+  FLASH_IRQHandler           0x08000B1F                  2  Code  Wk  STM32F103xx_Vectors.o
+  FSMC_IRQHandler            0x08000B61                  2  Code  Wk  STM32F103xx_Vectors.o
+  HardFault_Handler          0x08001C89          48      2  Code  Gb  BSP.o
+  I2C1_ER_IRQHandler         0x08000B43                  2  Code  Wk  STM32F103xx_Vectors.o
+  I2C1_EV_IRQHandler         0x08000B41                  2  Code  Wk  STM32F103xx_Vectors.o
+  I2C2_ER_IRQHandler         0x08000B47                  2  Code  Wk  STM32F103xx_Vectors.o
+  I2C2_EV_IRQHandler         0x08000B45                  2  Code  Wk  STM32F103xx_Vectors.o
+  IRQInit                    0x08001D99          40      2  Code  Gb  IRQ.o
+  NMI_Handler                0x080007C3                  2  Code  Wk  STM32F103xx_Vectors.o
+  PVD_IRQHandler             0x08000B19                  2  Code  Wk  STM32F103xx_Vectors.o
+  PendSV_Handler             0x08000B15                  2  Code  Wk  STM32F103xx_Vectors.o
+  PortInit                   0x08001153         210      2  Code  Gb  Hal.o
+  RCC_IRQHandler             0x08000B21                  2  Code  Wk  STM32F103xx_Vectors.o
+  RTCAlarm_IRQHandler        0x08000B53                  2  Code  Wk  STM32F103xx_Vectors.o
+  RTC_IRQHandler             0x08000B1D                  2  Code  Wk  STM32F103xx_Vectors.o
+  Reset_Handler              0x0800156D                  2  Code  Gb  STM32F1xx_Startup.o
+  SDIO_IRQHandler            0x08000B63                  2  Code  Wk  STM32F103xx_Vectors.o
+  SEGGER_RTT_Write           0x0800147D         146      2  Code  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  SEGGER_RTT_WriteNoLock     0x080013A9         122      2  Code  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  SPI1_IRQHandler            0x08000B49                  2  Code  Wk  STM32F103xx_Vectors.o
+  SPI2_IRQHandler            0x08000B4B                  2  Code  Wk  STM32F103xx_Vectors.o
+  SPI3_IRQHandler            0x08000B67                  2  Code  Wk  STM32F103xx_Vectors.o
+  SVC_Handler                0x08000B13                  2  Code  Wk  STM32F103xx_Vectors.o
+  SetSysClock                0x08001575          12      2  Code  Lc  system_stm32f10x.o
+  SetSysClockTo72            0x08001581         264      2  Code  Lc  system_stm32f10x.o
+  SysTick_Config             0x08000DD3          78      2  Code  Lc  main.o
+  SysTick_Handler            0x0800195D          72      2  Code  Gb  main.o
+  SystemCoreClock            0x20000518           4      4  Init  Gb  system_stm32f10x.o
+  SystemCoreClockUpdate      0x08000BE3         282      2  Code  Gb  system_stm32f10x.o
+  SystemInit                 0x08000B79         106      2  Code  Gb  system_stm32f10x.o
+  TAMPER_IRQHandler          0x08000B1B                  2  Code  Wk  STM32F103xx_Vectors.o
+  TIM1_BRK_TIM9_IRQHandler   0x08000B3B                  2  Code  Wk  STM32F103xx_Vectors.o
+  TIM1_CC_IRQHandler         0x08000B3F                  2  Code  Wk  STM32F103xx_Vectors.o
   TIM1_TRG_COM_TIM11_IRQHandler
-                             0x08000B21                  2  Code  Wk  STM32F103xx_Vectors.o
-  TIM1_UP_TIM10_IRQHandler   0x0800123B          22      2  Code  Gb  Timer.o
-  TIM2_IRQHandler            0x080012DB          22      2  Code  Gb  Timer.o
-  TIM3_IRQHandler            0x080012F1          22      2  Code  Gb  Timer.o
-  TIM4_IRQHandler            0x08001307          22      2  Code  Gb  Timer.o
-  TIM5_IRQHandler            0x08000B49                  2  Code  Wk  STM32F103xx_Vectors.o
-  TIM6_IRQHandler            0x08000B51                  2  Code  Wk  STM32F103xx_Vectors.o
-  TIM7_IRQHandler            0x08000B53                  2  Code  Wk  STM32F103xx_Vectors.o
-  TIM8_BRK_TIM12_IRQHandler  0x08000B3B                  2  Code  Wk  STM32F103xx_Vectors.o
-  TIM8_CC_IRQHandler         0x08000B41                  2  Code  Wk  STM32F103xx_Vectors.o
+                             0x08000B3D                  2  Code  Wk  STM32F103xx_Vectors.o
+  TIM1_UP_TIM10_IRQHandler   0x080012C7          22      2  Code  Gb  Timer.o
+  TIM2_IRQHandler            0x08001367          22      2  Code  Gb  Timer.o
+  TIM3_IRQHandler            0x0800137D          22      2  Code  Gb  Timer.o
+  TIM4_IRQHandler            0x08001393          22      2  Code  Gb  Timer.o
+  TIM5_IRQHandler            0x08000B65                  2  Code  Wk  STM32F103xx_Vectors.o
+  TIM6_IRQHandler            0x08000B6D                  2  Code  Wk  STM32F103xx_Vectors.o
+  TIM7_IRQHandler            0x08000B6F                  2  Code  Wk  STM32F103xx_Vectors.o
+  TIM8_BRK_TIM12_IRQHandler  0x08000B57                  2  Code  Wk  STM32F103xx_Vectors.o
+  TIM8_CC_IRQHandler         0x08000B5D                  2  Code  Wk  STM32F103xx_Vectors.o
   TIM8_TRG_COM_TIM14_IRQHandler
-                             0x08000B3F                  2  Code  Wk  STM32F103xx_Vectors.o
-  TIM8_UP_TIM13_IRQHandler   0x08000B3D                  2  Code  Wk  STM32F103xx_Vectors.o
-  TimerAddHook               0x08001F19         124      2  Code  Gb  Timer.o
-  TimerInit                  0x080005C9         478      4  Code  Gb  Timer.o
-  UART4_IRQHandler           0x08000B4D                  2  Code  Wk  STM32F103xx_Vectors.o
-  UART5_IRQHandler           0x08000B4F                  2  Code  Wk  STM32F103xx_Vectors.o
-  USART1_IRQHandler          0x08000B31                  2  Code  Wk  STM32F103xx_Vectors.o
-  USART2_IRQHandler          0x08000B33                  2  Code  Wk  STM32F103xx_Vectors.o
-  USART3_IRQHandler          0x08000B35                  2  Code  Wk  STM32F103xx_Vectors.o
-  USB_FS_WKUP_IRQHandler     0x08000B39                  2  Code  Wk  STM32F103xx_Vectors.o
-  USonicAddDevice            0x08001AB5         264      2  Code  Gb  Ultrasound.o
-  USonicISR                  0x08000FBF         170      2  Code  Gb  Ultrasound.o
-  USonicInit                 0x080019A5         272      2  Code  Gb  Ultrasound.o
-  USonicRead                 0x08001BBD          44      2  Code  Gb  Ultrasound.o
-  USonicSetEchoTimeOut       0x08000F5D          98      2  Code  Gb  Ultrasound.o
-  USonicTrigger              0x08000F0F          78      2  Code  Gb  Ultrasound.o
-  WWDG_IRQHandler            0x08000AFB                  2  Code  Wk  STM32F103xx_Vectors.o
+                             0x08000B5B                  2  Code  Wk  STM32F103xx_Vectors.o
+  TIM8_UP_TIM13_IRQHandler   0x08000B59                  2  Code  Wk  STM32F103xx_Vectors.o
+  TimerAddHook               0x08001FA5         124      2  Code  Gb  Timer.o
+  TimerInit                  0x080005C9         506      4  Code  Gb  Timer.o
+  UART4_IRQHandler           0x08000B69                  2  Code  Wk  STM32F103xx_Vectors.o
+  UART5_IRQHandler           0x08000B6B                  2  Code  Wk  STM32F103xx_Vectors.o
+  USART1_IRQHandler          0x08000B4D                  2  Code  Wk  STM32F103xx_Vectors.o
+  USART2_IRQHandler          0x08000B4F                  2  Code  Wk  STM32F103xx_Vectors.o
+  USART3_IRQHandler          0x08000B51                  2  Code  Wk  STM32F103xx_Vectors.o
+  USB_FS_WKUP_IRQHandler     0x08000B55                  2  Code  Wk  STM32F103xx_Vectors.o
+  USonicAddDevice            0x08001B41         264      2  Code  Gb  Ultrasound.o
+  USonicISR                  0x0800101B         170      2  Code  Gb  Ultrasound.o
+  USonicInit                 0x08001A31         272      2  Code  Gb  Ultrasound.o
+  USonicRead                 0x08001C49          44      2  Code  Gb  Ultrasound.o
+  USonicSetEchoTimeOut       0x08000FB9          98      2  Code  Gb  Ultrasound.o
+  USonicTrigger              0x08000F6B          78      2  Code  Gb  Ultrasound.o
+  WWDG_IRQHandler            0x08000B17                  2  Code  Wk  STM32F103xx_Vectors.o
   _SEGGER_RTT                0x20000008         120      4  Zero  Gb  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  _WriteBlocking             0x08001397          90      2  Code  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  _WriteNoCheck              0x08002019          68      2  Code  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  _WriteBlocking             0x08001423          90      2  Code  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  _WriteNoCheck              0x080020A5          68      2  Code  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
   __HEAPSIZE__               0x00000200                     ----  Gb  [ Linker created ]
-  __NVIC_ClearPendingIRQ     0x08001D35          48      2  Code  Lc  IRQ.o
-  __NVIC_EnableIRQ           0x08001D65          48      2  Code  Lc  IRQ.o
-  __NVIC_EnableIRQ           0x08001EE9          48      2  Code  Lc  Timer.o
-  __NVIC_SetPriority         0x0800193D          64      2  Code  Lc  main.o
+  __NVIC_ClearPendingIRQ     0x08001DC1          48      2  Code  Lc  IRQ.o
+  __NVIC_EnableIRQ           0x08001DF1          48      2  Code  Lc  IRQ.o
+  __NVIC_EnableIRQ           0x08001F75          48      2  Code  Lc  Timer.o
+  __NVIC_SetPriority         0x080019C9          64      2  Code  Lc  main.o
   __SEGGER_RTL_buffered_putchar
-                             0x08001F9D          40      2  Code  Lc  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
-  __SEGGER_RTL_hex_lc        0x080022A0          16         Cnst  Lc  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  __SEGGER_RTL_hex_uc        0x08002290          16         Cnst  Lc  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  __SEGGER_RTL_putc          0x08001483          94      2  Code  Gb  prinops.o (libc_v7m_t_le_eabi.a)
-  __SEGGER_RTL_vfprintf      0x080007A9         846      4  Code  Gb  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+                             0x08002029          40      2  Code  Lc  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
+  __SEGGER_RTL_hex_lc        0x0800232C          16         Cnst  Lc  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  __SEGGER_RTL_hex_uc        0x0800231C          16         Cnst  Lc  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  __SEGGER_RTL_putc          0x0800150F          94      2  Code  Gb  prinops.o (libc_v7m_t_le_eabi.a)
+  __SEGGER_RTL_vfprintf      0x080007C5         846      4  Code  Gb  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
   __SEGGER_RTL_vfprintf_int_nwp
-                             0x080007A9         846      4  Code  Gb  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
-  __SEGGER_init_copy         0x0800232F          20      2  Code  Wk  SEGGER_crtinit_v7m_little.o
-  __SEGGER_init_ctors        0x080022CD          24      4  Code  Wk  SEGGER_crtinit_v7m_little.o
-  __SEGGER_init_data__       0x08002314         [8]      4  Cnst  Lc  [ Linker created ]
+                             0x080007C5         846      4  Code  Gb  __SEGGER_RTL_vfprintf_int_nwp.o (libc_v7m_t_le_eabi.a)
+  __SEGGER_init_copy         0x080023BB          20      2  Code  Wk  SEGGER_crtinit_v7m_little.o
+  __SEGGER_init_ctors        0x08002359          24      4  Code  Wk  SEGGER_crtinit_v7m_little.o
+  __SEGGER_init_data__       0x080023A0         [8]      4  Cnst  Lc  [ Linker created ]
   __SEGGER_init_done         0x0800013B                  4  Code  Gb  SEGGER_THUMB_Startup.o
-  __SEGGER_init_heap         0x080022B1          20      4  Code  Wk  SEGGER_crtinit_v7m_little.o
-  __SEGGER_init_table__      0x080022EC        [40]      4  Cnst  Lc  [ Linker created ]
-  __SEGGER_init_zero         0x0800231D          18      2  Code  Wk  SEGGER_crtinit_v7m_little.o
+  __SEGGER_init_heap         0x0800233D          20      4  Code  Wk  SEGGER_crtinit_v7m_little.o
+  __SEGGER_init_table__      0x08002378        [40]      4  Cnst  Lc  [ Linker created ]
+  __SEGGER_init_zero         0x080023A9          18      2  Code  Wk  SEGGER_crtinit_v7m_little.o
   __STACKSIZE_PROCESS__      0x00000000                     ----  Gb  [ Linker created ]
   __STACKSIZE__              0x00000400                     ----  Gb  [ Linker created ]
   __aeabi_d2iz               0x08000481          74      4  Code  Wk  floatasmops_arm.o (libc_v7m_t_le_eabi.a)
@@ -591,44 +592,45 @@ Symbols by name and then by address:
   __aeabi_memcpy4            0x08000585                  4  Code  Wk  strasmops_arm.o (libc_v7m_t_le_eabi.a)
   __aeabi_memcpy8            0x08000585                  4  Code  Wk  strasmops_arm.o (libc_v7m_t_le_eabi.a)
   __aeabi_ui2d               0x0800051D          28      4  Code  Wk  floatasmops_arm.o (libc_v7m_t_le_eabi.a)
-  __ctors_end__              0x08002270                     ----  Gb  [ Linker created ]
-  __ctors_start__            0x0800226C                     ----  Gb  [ Linker created ]
-  __heap_end__               0x20000718                     ----  Gb  [ Linker created ]
-  __heap_start__             0x20000518                     ----  Gb  [ Linker created ]
+  __ctors_end__              0x080022FC                     ----  Gb  [ Linker created ]
+  __ctors_start__            0x080022F8                     ----  Gb  [ Linker created ]
+  __heap_end__               0x20000720                     ----  Gb  [ Linker created ]
+  __heap_start__             0x20000520                     ----  Gb  [ Linker created ]
   __stack_end__              0x20005000                     ----  Gb  [ Linker created ]
-  _acDownBuffer              0x200004FC          16         Zero  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
-  _acUpBuffer                0x200000FC       1 024         Zero  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  _acDownBuffer              0x20000508          16         Zero  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
+  _acUpBuffer                0x20000108       1 024         Zero  Lc  SEGGER_RTT.o (libc_v7m_t_le_eabi.a)
   _start                     0x08000131          14      4  Code  Gb  SEGGER_THUMB_Startup.o
   _vectors                   0x08000000       [304]    512  Code  Gb  STM32F103xx_Vectors.o
   _vectors_end               0x08000130                512  Code  Lc  STM32F103xx_Vectors.o
-  abs                        0x08001F95           8      2  Code  Gb  intops.o (libc_v7m_t_le_eabi.a)
+  abs                        0x08002021           8      2  Code  Gb  intops.o (libc_v7m_t_le_eabi.a)
   exit                       0x0800013F           2      4  Code  Gb  SEGGER_THUMB_Startup.o
   g_Timer1Handle             0x200000BC          12      4  Zero  Lc  main.o
-  g_TimerHook                0x200000DC           8      4  Zero  Lc  Ultrasound.o
+  g_Timer4Handle             0x200000C8          12      4  Zero  Lc  main.o
+  g_TimerHook                0x200000E8           8      4  Zero  Lc  Ultrasound.o
   g_USHandles                0x20000080          44      4  Zero  Lc  main.o
-  g_USonicStatus             0x200000D4           8      4  Zero  Lc  main.o
-  g_UsonicDist               0x200000E8           4      4  Zero  Lc  main.o
-  g_UsonicDist_prev          0x200000C8          12      4  Zero  Lc  main.o
+  g_USonicStatus             0x200000E0           8      4  Zero  Lc  main.o
+  g_UsonicDist               0x200000F4           4      4  Zero  Lc  main.o
+  g_UsonicDist_prev          0x200000D4          12      4  Zero  Lc  main.o
   g_aTimerIrqHandle          0x200000AC          16      4  Zero  Lc  Timer.o
-  g_bSystemTick              0x200000EC           4      4  Zero  Lc  main.o
-  g_bUSonicTickReady         0x200000E4           4      4  Zero  Lc  main.o
+  g_bSystemTick              0x200000F8           4      4  Zero  Lc  main.o
+  g_bUSonicTickReady         0x200000F0           4      4  Zero  Lc  main.o
   g_dTimerUsConst            0x20000000           8      8  Zero  Lc  Ultrasound.o
-  g_nTriggerConst            0x200000F8           4      4  Zero  Lc  Ultrasound.o
-  g_nUSonicTick              0x20000510           4      4  Init  Lc  main.o
-  g_nUsonicIdx               0x200000F0           4      4  Zero  Lc  main.o
-  g_pusonicIrqHandles        0x200000F4           4      4  Zero  Lc  Ultrasound.o
-  main                       0x08000CE1         150      2  Code  Gb  main.o
-  main_UsonicExe             0x080015FD         724      2  Code  Lc  main.o
-  main_cbUSOnReady           0x08000E3F          18      2  Code  Lc  main.o
-  main_cbUSOnTrigger         0x0800197D          40      2  Code  Lc  main.o
-  main_ultraSoundInit        0x08000DC5         122      2  Code  Lc  main.o
+  g_nTriggerConst            0x20000104           4      4  Zero  Lc  Ultrasound.o
+  g_nUSonicTick              0x2000051C           4      4  Init  Lc  main.o
+  g_nUsonicIdx               0x200000FC           4      4  Zero  Lc  main.o
+  g_pusonicIrqHandles        0x20000100           4      4  Zero  Lc  Ultrasound.o
+  main                       0x08000CFD         214      2  Code  Gb  main.o
+  main_UsonicExe             0x08001689         724      2  Code  Lc  main.o
+  main_cbUSOnReady           0x08000E9B          18      2  Code  Lc  main.o
+  main_cbUSOnTrigger         0x08001A09          40      2  Code  Lc  main.o
+  main_ultraSoundInit        0x08000E21         122      2  Code  Lc  main.o
   memcpy                     0x08000579          80      4  Code  Wk  strasmops_arm.o (libc_v7m_t_le_eabi.a)
-  printf                     0x08001FC5          84      2  Code  Gb  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
-  printf_rtt                 0x08001FC5          84      2  Code  Gb  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
-  reset_handler              0x080014E1                  2  Code  Gb  STM32F1xx_Startup.o
+  printf                     0x08002051          84      2  Code  Gb  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
+  printf_rtt                 0x08002051          84      2  Code  Gb  prinops_scanops_rtt.o (libc_v7m_t_le_eabi.a)
+  reset_handler              0x0800156D                  2  Code  Gb  STM32F1xx_Startup.o
   strcpy                     0x08000539          64      4  Code  Wk  strasmops_arm.o (libc_v7m_t_le_eabi.a)
-  timer_IRQHandler           0x08001251         138      2  Code  Lc  Timer.o
-  usonic_cbOnTimer           0x08000E51         190      2  Code  Lc  Ultrasound.o
+  timer_IRQHandler           0x080012DD         138      2  Code  Lc  Timer.o
+  usonic_cbOnTimer           0x08000EAD         190      2  Code  Lc  Ultrasound.o
 
 
 ***********************************************************************************************
@@ -641,7 +643,7 @@ Region summary:
 
   Name        Range                    Size                Used              Unused      Alignment Loss
   ----------  -----------------  ----------  ------------------  ------------------  ------------------
-  FLASH       08000000-0801ffff     131 072       9 024   6.88%     122 048  93.12%           0   0.00%
-  RAM         20000000-20004fff      20 480       2 836  13.85%      17 644  86.15%           0   0.00%
+  FLASH       08000000-0801ffff     131 072       9 164   6.99%     121 908  93.01%           0   0.00%
+  RAM         20000000-20004fff      20 480       2 848  13.91%      17 632  86.09%           0   0.00%
 
 Link complete: 0 errors, 0 warnings, 0 remarks

@@ -63,6 +63,14 @@
         <file file_name="../Src/BSP/Timer/Timer.c" />
         <file file_name="../Src/BSP/Timer/Timer.h" />
       </folder>
+      <folder Name="BSP::PWM">
+        <file file_name="../Src/BSP/PWM/pwm.c" />
+        <file file_name="../Src/BSP/PWM/pwm.h" />
+      </folder>
+      <folder Name="App::Motor">
+        <file file_name="../Src/App/Motor/motor.c" />
+        <file file_name="../Src/App/Motor/motor.h" />
+      </folder>
     </folder>
     <folder Name="System Files">
       <file file_name="../Src/BSP/MCU/SEGGER_THUMB_Startup.s" />
@@ -79,7 +87,7 @@
   <configuration
     Name="Debug"
     c_preprocessor_definitions="_DEBUG"
-    c_user_include_directories=". ;..\\Lib\\Common;..\\Lib\\Common\\Inc;..\\Src\\BSP\\MCU;..\\Src\\BSP;..\\Src\\App\\Ultrasound;..\\Src\\BSP\\Timer;..\\Src\\BSP\\SPIM;..\\Src\\BSP\\MCU\\STM32F1xx\\CMSIS\\Device\\Include"
+    c_user_include_directories=". ;..\\Lib\\Common;..\\Lib\\Common\\Inc;..\\Src\\BSP\\MCU;..\\Src\\BSP;..\\Src\\App\\Ultrasound;..\\Src\\App\\Motor;..\\Src\\BSP\\Timer;..\\Src\\BSP\\PWM;..\\Src\\BSP\\SPIM;..\\Src\\BSP\\MCU\\STM32F1xx\\CMSIS\\Device\\Include"
     gcc_debugging_level="Level 3"
     gcc_optimization_level="None" />
   <configuration

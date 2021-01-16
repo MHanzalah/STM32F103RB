@@ -1,5 +1,5 @@
-Output/Debug/Obj/MouseTrap/main.o: \
-  C:\Users\M\ Hanzalah\Documents\Embedded\STM32F103RB\MouseTrap\Source\ code\Src\main.c \
+Output/Debug/Obj/MouseTrap/motor.o: \
+  C:\Users\M\ Hanzalah\Documents\Embedded\STM32F103RB\MouseTrap\Source\ code\Src\App\Motor\motor.c \
   ..\Lib\Common\Inc\Common.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.20\segger-rtl\include\stdio.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.20\segger-rtl\include\__SEGGER_RTL.h \
@@ -15,6 +15,4 @@ Output/Debug/Obj/MouseTrap/main.o: \
   C:\Users\M\ Hanzalah\AppData\Local\SEGGER\SEGGER\ Embedded\ Studio\v3\packages\CMSIS_5\CMSIS\Core\Include\cmsis_compiler.h \
   C:\Users\M\ Hanzalah\AppData\Local\SEGGER\SEGGER\ Embedded\ Studio\v3\packages\CMSIS_5\CMSIS\Core\Include\cmsis_gcc.h \
   ..\Src\BSP\MCU\STM32F1xx\CMSIS\Device\Include\system_stm32f10x.h \
-  ..\Src\BSP\BSP.h ..\Src\BSP\Hal.h ..\Src\BSP\IRQ.h \
-  ..\Src\BSP\Timer\Timer.h ..\Src\BSP\PWM\pwm.h \
-  ..\Src\App\Ultrasound\Ultrasound.h
+  ..\Src\BSP\Hal.h ..\Src\App\Motor\motor.h

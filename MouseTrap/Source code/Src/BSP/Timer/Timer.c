@@ -6,10 +6,11 @@ static volatile PTIMER_HANDLE g_aTimerIrqHandle[TOTAL_TIMER] = { 0, 0, 0, 0};
 
 static void timer_IRQHandler( PTIMER_HANDLE pHandle );
 
-int TimerInit(  PTIMER_HANDLE pHandle,
-                uint8_t nTimer,
-                uint32_t nFreq,
-                BOOL bIrqEn )
+int TimerInit( PTIMER_HANDLE pHandle,
+               uint8_t nTimer,
+               uint32_t nFreq,
+               BOOL bPwmMode,
+               BOOL bIrqEn )
 {
   TIM_TypeDef* timer;
   IRQn_Type    irq;
@@ -114,20 +115,33 @@ int TimerInit(  PTIMER_HANDLE pHandle,
   /* Enable update generation interrupt in event register */
   timer->EGR |= TIM_EGR_UG;
 
-  /* Enable Timer counting */
-  timer->CR1 |= TIM_CR1_CEN | TIM_CR1_ARPE;
+  if( bPwmMode == TRUE )
+  {
+    /* OFF both compare outputs */
+    timer->CCMR1 = 0;
+    timer->CCMR2 = 0;
+  }
 
-  /* Enable Timer Update Interrupt */
-  timer->DIER |= TIM_DIER_UIE;
+  else
+  {
+    /* Enable Timer counting */
+    timer->CR1 |= TIM_CR1_CEN | TIM_CR1_ARPE;
+  }
 
-  NVIC_EnableIRQ( irq );
+  if( bPwmMode == FALSE )
+  {
+    /* Enable Timer Update Interrupt */
+    timer->DIER |= TIM_DIER_UIE;
+
+    NVIC_EnableIRQ( irq );
+  }
 
   return TIMER_OK;
 }
 
-void TimerAddHook(  PTIMER_HANDLE pHandle,
-                    PTIMER_HOOK pHook,
-                    TIMER_CB_UPDATE* pfUpdate )
+void TimerAddHook( PTIMER_HANDLE pHandle,
+                   PTIMER_HOOK pHook,
+                   TIMER_CB_UPDATE* pfUpdate )
 {
   ASSERT( 0 != pHandle );
   ASSERT( 0 != pHook );

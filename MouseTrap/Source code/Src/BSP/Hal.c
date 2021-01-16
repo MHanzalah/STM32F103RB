@@ -44,11 +44,13 @@
 void PortInit( void )
 {
     /* IO Port B & TIMER1 & Alternate Function Clock enabled */
-    RCC->APB2ENR |= RCC_APB2ENR_IOPBEN | RCC_APB2ENR_IOPDEN 
+    RCC->APB2ENR |= RCC_APB2ENR_IOPAEN
+                  | RCC_APB2ENR_IOPBEN
+                  | RCC_APB2ENR_IOPDEN
                   | RCC_APB2ENR_TIM1EN
                   | RCC_APB2ENR_AFIOEN;
 
-    /* Ultrasound Trigger - PB0 */
+    /* Ultrasound Trigger - PD1 */
     GPIOD->CRL &= ~GPIO_CRL_CNF1;
     GPIOD->CRL |= GPIO_CRL_MODE1_0 | GPIO_CRL_MODE1_1;
 
@@ -74,6 +76,15 @@ void PortInit( void )
     EXTI->IMR |= EXTI_IMR_MR2;
     EXTI->RTSR |= EXTI_RTSR_TR2;
     EXTI->FTSR |= EXTI_FTSR_TR2;
+
+    /* Motor Direction = PA1 */
+    GPIOA->CRL &= ~GPIO_CRL_CNF1;
+    GPIOA->CRL |= GPIO_CRL_MODE1_0 | GPIO_CRL_MODE1_1;
+
+    /* Motor PWM TIM4 CH1 = PB6 */
+    GPIOB->CRL |= GPIO_CRL_MODE6_0 | GPIO_CRL_MODE6_1;
+    GPIOB->CRL &= ~GPIO_CRL_CNF6;
+    GPIOB->CRL |= GPIO_CRL_CNF6_1;
 
 }
 /*!********************* @} End of Hal Function ******************************/

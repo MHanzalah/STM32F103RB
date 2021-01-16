@@ -32,13 +32,14 @@ typedef struct _tagTimer_Handle
 
 }TIMER_HANDLE, *PTIMER_HANDLE;
 
-int TimerInit(  PTIMER_HANDLE pHandle,
-                uint8_t nTimer,
-                uint32_t nFreq,
-                BOOL bIrqEn );
+int TimerInit( PTIMER_HANDLE pHandle,
+               uint8_t nTimer,
+               uint32_t nFreq,
+               BOOL bPwmMode,
+               BOOL bIrqEn );
 
-void TimerAddHook(  PTIMER_HANDLE pHandle,
-                    PTIMER_HOOK pHook,
-                    TIMER_CB_UPDATE* pfUpdate );
+void TimerAddHook( PTIMER_HANDLE pHandle,
+                   PTIMER_HOOK pHook,
+                   TIMER_CB_UPDATE* pfUpdate );
 
 #endif /* __TIMER_DOT_H__ */

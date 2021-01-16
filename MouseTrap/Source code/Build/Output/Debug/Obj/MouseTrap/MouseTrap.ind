@@ -6,6 +6,8 @@
 "Output/Debug/Obj/MouseTrap/Hal.o"
 "Output/Debug/Obj/MouseTrap/IRQ.o"
 "Output/Debug/Obj/MouseTrap/Timer.o"
+"Output/Debug/Obj/MouseTrap/pwm.o"
+"Output/Debug/Obj/MouseTrap/motor.o"
 "Output/Debug/Obj/MouseTrap/SEGGER_THUMB_Startup.o"
 "Output/Debug/Obj/MouseTrap/STM32F1xx_Startup.o"
 "Output/Debug/Obj/MouseTrap/STM32F103xx_Vectors.o"

@@ -3,6 +3,7 @@
 #include "Hal.h"
 #include "IRQ.h"
 #include "Timer.h"
+#include "pwm.h"
 #include "Ultrasound.h"
 
 
@@ -22,8 +23,12 @@
 #define GREATER_FACTOR_2            10
 #define LOWER_FACTOR_2              8
 
+/* To debug ultrasound value */
+#define DEBUG_US
+
 /* SYSTEM AND TIMER */
 static TIMER_HANDLE                   g_Timer1Handle;
+static TIMER_HANDLE                   g_Timer4Handle;
 static volatile BOOL                  g_bSystemTick         = FALSE;
 static volatile int                   g_nSystemTick         = SYS_TICK_MS;
 static volatile int                   g_nDelayms            = 0;
@@ -56,7 +61,10 @@ void main(void)
   SysTick_Config( SystemCoreClock/SYSTEMCLOCK_FREQ );
 
   /* Initialize timer for Ultrasonic */
-  TimerInit( &g_Timer1Handle, TIMER1, TIMER1_TICK_HZ, TRUE );
+  TimerInit( &g_Timer1Handle, TIMER1, TIMER1_TICK_HZ, FALSE, TRUE );
+
+  /* Initialize timer for PWM */
+  TimerInit( &g_Timer4Handle, TIMER4, TIMER1_TICK_HZ, TRUE, TRUE );
 
   /* Ultrasound module initialization */
   main_ultraSoundInit();
@@ -75,7 +83,19 @@ void main(void)
        /* Read Usonic */
        main_UsonicExe();
 
+#if defined(DEBUG_US)
        TRACE("Distance: %d\r\n", g_UsonicDist.nDist[0] );
+#endif
+
+       /* Temporary value - to be adjusted */
+       if( g_UsonicDist.nDist[0] < 9000 )
+       {
+          /* To implement enable PWM, move arm */
+       }
+       else
+       {
+          /* To implement disable PWM */
+       }
      }
   }
 }
